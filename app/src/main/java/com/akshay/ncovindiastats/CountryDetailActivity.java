@@ -5,6 +5,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -61,6 +62,8 @@ public class CountryDetailActivity extends AppCompatActivity {
     }
 
     private void getCountryDetails(String country_code) {
+        final ProgressDialog dialog = ProgressDialog.show(CountryDetailActivity.this, "", "Loading. Please wait....", true);
+
         final AllCountriesAPIInterface allCountriesAPIInterface = AllCountriesAPIClient.getClient().create(AllCountriesAPIInterface.class);
 
         Call<Example1> call = allCountriesAPIInterface.getCountryData(country_code);
@@ -96,11 +99,13 @@ public class CountryDetailActivity extends AppCompatActivity {
                 tv_latest_dead.setText(ld + "\nDead");
                 tv_recoveryrate.setText(rr + " %\nRecovery Rate");
                 tv_deathrate.setText(dr + " %\nDeath Rate");
+                dialog.dismiss();
             }
 
             @Override
             public void onFailure(Call<Example1> call, Throwable t) {
                 Toast.makeText(CountryDetailActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+                dialog.dismiss();
             }
         });
     }

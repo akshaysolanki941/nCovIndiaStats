@@ -7,7 +7,7 @@
     android:background="#5c6aff"
     android:clipToPadding="false"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".NumbersActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/detail_app_bar"
@@ -30,73 +30,80 @@
             <RelativeLayout
                 android:id="@+id/rl1"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:background="#5c6aff">
 
                 <TextView
-                    android:id="@+id/tv_covid19"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_primaryinfo"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/overpass_semi_bold"
-                    android:text="COVID-19"
-                    android:textColor="#ffffff"
-                    android:textSize="30sp" />
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/overpass_bold_italic"
+                    android:padding="2dp"
+                    android:text="Primary Information:"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/tv_stats"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_number"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_covid19"
-                    android:layout_marginStart="10dp"
+                    android:layout_below="@+id/tv_primaryinfo"
+                    android:layout_margin="5dp"
                     android:fontFamily="@font/overpass_light"
-                    android:text="Stats"
+                    android:padding="2dp"
+                    android:text="Number:-   6846846"
                     android:textColor="#ffffff"
                     android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/btn_india_states"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/tv_tollfree_number"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_margin="15dp"
-                    android:background="@drawable/btn_bg1"
+                    android:layout_below="@+id/tv_number"
+                    android:layout_margin="5dp"
                     android:fontFamily="@font/overpass_light"
-                    android:padding="5dp"
-                    android:text="State-wise stats\nof india"
-                    android:textColor="#ffffff" />
+                    android:padding="2dp"
+                    android:text="Toll Free Number:-   6846846"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/tv_email"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/btn_india_states"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="15dp"
-                    android:orientation="horizontal"
-                    android:padding="10dp"
-                    android:weightSum="2">
+                    android:layout_below="@+id/tv_tollfree_number"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/overpass_light"
+                    android:padding="2dp"
+                    android:text="Email:-   test@gmail.com"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
 
-                    <ImageButton
-                        android:id="@+id/ib_info"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/btn_bg1"
-                        android:padding="7dp"
-                        android:src="@drawable/ic_info_outline_black_24dp" />
+                <TextView
+                    android:id="@+id/tv_twitter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_email"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/overpass_light"
+                    android:padding="2dp"
+                    android:text="Twitter:-   xyz"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
 
-                    <ImageButton
-                        android:id="@+id/ib_emergency"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@drawable/btn_bg1"
-                        android:padding="7dp"
-                        android:src="@drawable/ic_report_problem_black_24dp" />
-
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_fb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_twitter"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/overpass_light"
+                    android:padding="2dp"
+                    android:text="Facebook:-   xyz"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
 
             </RelativeLayout>
 
@@ -121,7 +128,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/et_bg"
-                android:hint="Search Country"
+                android:hint="Search States"
                 android:padding="5dp"
                 android:textColor="#FFFFFF" />
 
@@ -136,7 +143,7 @@
         </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_countries"
+            android:id="@+id/rv_contacts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/s_b"

@@ -7,6 +7,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,6 +41,8 @@ public class CountryTimelineActivity extends AppCompatActivity {
     }
 
     private void getCountryTimeline(String country_code) {
+        final ProgressDialog dialog = ProgressDialog.show(CountryTimelineActivity.this, "", "Loading. Please wait....", true);
+
         final AllCountriesAPIInterface allCountriesAPIInterface = AllCountriesAPIClient.getClient().create(AllCountriesAPIInterface.class);
 
         Call<Example1> call = allCountriesAPIInterface.getCountryData(country_code);
@@ -51,11 +54,13 @@ public class CountryTimelineActivity extends AppCompatActivity {
                 RVCountryTimelineAdapter adapter = new RVCountryTimelineAdapter(mydata, CountryTimelineActivity.this);
                 adapter.notifyDataSetChanged();
                 rv_timeline.setAdapter(adapter);
+                dialog.dismiss();
             }
 
             @Override
             public void onFailure(Call<Example1> call, Throwable t) {
                 Toast.makeText(CountryTimelineActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
+                dialog.dismiss();
             }
         });
     }

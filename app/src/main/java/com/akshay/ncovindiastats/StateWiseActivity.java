@@ -7,6 +7,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -41,6 +42,8 @@ public class StateWiseActivity extends AppCompatActivity {
     }
 
     private void getStateWiseData() {
+        final ProgressDialog dialog = ProgressDialog.show(StateWiseActivity.this, "", "Loading. Please wait....", true);
+
         final StatesAPIInterface statesAPIInterface = StatesAPIClient.getClient().create(StatesAPIInterface.class);
 
         Call<Example2> call = statesAPIInterface.getStateWiseData();
@@ -68,10 +71,12 @@ public class StateWiseActivity extends AppCompatActivity {
 
                     }
                 });
+                dialog.dismiss();
             }
 
             @Override
             public void onFailure(Call<Example2> call, Throwable t) {
+                dialog.dismiss();
                 Toast.makeText(StateWiseActivity.this, t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });

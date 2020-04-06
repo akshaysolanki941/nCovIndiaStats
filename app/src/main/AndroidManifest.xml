@@ -12,9 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".NumbersActivity"></activity>
         <activity
             android:name=".StateWiseActivity"
-            android:screenOrientation="locked"></activity>
+            android:screenOrientation="locked" />
         <activity
             android:name=".CountryTimelineActivity"
             android:screenOrientation="locked" />
