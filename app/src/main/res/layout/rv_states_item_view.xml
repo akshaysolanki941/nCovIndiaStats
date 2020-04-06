@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:elevation="5dp"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_statename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/overpass_semi_bold"
+                android:padding="2dp"
+                android:text="State Name"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_statename"
+                android:divider="@drawable/divider"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:showDividers="middle"
+                android:weightSum="4">
+
+                <TextView
+                    android:id="@+id/tv_confirmed_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/overpass_semi_bold"
+                    android:padding="5dp"
+                    android:text="0\nConfirmed"
+                    android:textAlignment="center"
+                    android:textColor="#fdb15d"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_recovered_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/overpass_semi_bold"
+                    android:padding="5dp"
+                    android:text="0\nRecovered"
+                    android:textAlignment="center"
+                    android:textColor="#5c6aff"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_active_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/overpass_semi_bold"
+                    android:padding="5dp"
+                    android:text="0\nActive"
+                    android:textAlignment="center"
+                    android:textColor="#ff6f47"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_dead_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/overpass_semi_bold"
+                    android:padding="5dp"
+                    android:text="0\nDead"
+                    android:textAlignment="center"
+                    android:textColor="#FF3700"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5c6aff"
+    tools:context=".CountryTimelineActivity">
+
+    <TextView
+        android:id="@+id/tv_timeline_countryname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5c6aff"
+        android:fontFamily="@font/overpass_bold_italic"
+        android:padding="10dp"
+        android:text="Timeline (Country name)"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_timeline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_timeline_countryname"
+        android:padding="5dp" />
+
+</RelativeLayout>

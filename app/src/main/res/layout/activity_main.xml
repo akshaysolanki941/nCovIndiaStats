@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5c6aff"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#5c6aff">
+
+        <TextView
+            android:id="@+id/tv_covid19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/overpass_semi_bold"
+            android:text="COVID-19"
+            android:textColor="#ffffff"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_stats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_covid19"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/overpass_light"
+            android:text="Stats"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_india_states"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="15dp"
+            android:background="@drawable/btn_bg1"
+            android:fontFamily="@font/overpass_light"
+            android:padding="5dp"
+            android:text="State-wise stats\nof india"
+            android:textColor="#ffffff" />
+
+        <ImageButton
+            android:id="@+id/ib_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_india_states"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/btn_bg1"
+            android:padding="7dp"
+            android:src="@drawable/ic_info_outline_black_24dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/rl_bg"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/et_bg"
+                android:hint="Search Country"
+                android:padding="5dp"
+                android:textColor="#FFFFFF" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:src="@drawable/ic_search_black_24dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_countries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl1"
+        android:padding="10dp" />
+
+</RelativeLayout>

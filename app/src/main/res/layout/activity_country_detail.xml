@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5c6aff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5c6aff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#5c6aff">
+
+                <TextView
+                    android:id="@+id/tv_countryName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/overpass_semi_bold"
+                    android:text="Country Name"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="26sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_coord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_countryName"
+                    android:layout_margin="5dp"
+                    android:elevation="10dp"
+                    app:cardBackgroundColor="#AAB0ED"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_coord"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/overpass_bold_italic"
+                            android:text="Coordinates:"
+                            android:textColor="#000000"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/tv_coord"
+                            android:divider="@drawable/divider"
+                            android:orientation="horizontal"
+                            android:padding="5dp"
+                            android:showDividers="middle"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/tv_latitude"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/overpass_semi_bold"
+                                android:padding="5dp"
+                                android:text="0\nLatitude"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tv_longitude"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/overpass_semi_bold"
+                                android:padding="5dp"
+                                android:text="0\nLongitude"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textSize="15sp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_popu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cv_coord"
+                    android:layout_margin="8dp"
+                    android:elevation="5dp"
+                    android:padding="4dp"
+                    app:cardBackgroundColor="#AAB0ED"
+                    app:cardCornerRadius="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_population"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/overpass_bold_italic"
+                        android:text="Population: 0"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl2"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="10dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_today"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/overpass_bold_italic"
+                        android:text="Today:"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_today"
+                        android:divider="@drawable/divider"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:showDividers="middle"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_confirmed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/overpass_semi_bold"
+                            android:padding="5dp"
+                            android:text="0\nConfirmed"
+                            android:textAlignment="center"
+                            android:textColor="#fdb15d"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_dead"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/overpass_semi_bold"
+                            android:padding="5dp"
+                            android:text="0\nDead"
+                            android:textAlignment="center"
+                            android:textColor="#FF3700"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_latestdata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cv_today"
+                android:layout_margin="8dp"
+                android:elevation="10dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_latestdata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/overpass_bold_italic"
+                        android:text="Latest Data:"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_latestdata"
+                        android:divider="@drawable/divider"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:showDividers="middle"
+                        android:weightSum="4">
+
+                        <TextView
+                            android:id="@+id/tv_latest_confirmed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/overpass_semi_bold"
+                            android:padding="5dp"
+                            android:text="0\nConfirmed"
+                            android:textAlignment="center"
+                            android:textColor="#fdb15d"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_latest_recovered"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/overpass_semi_bold"
+                            android:padding="5dp"
+                            android:text="0\nRecovered"
+                            android:textAlignment="center"
+                            android:textColor="#5c6aff"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_latest_critical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/overpass_semi_bold"
+                            android:padding="5dp"
+                            android:text="0\nCritical"
+                            android:textAlignment="center"
+                            android:textColor="#ff6f47"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_latest_dead"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/overpass_semi_bold"
+                            android:padding="5dp"
+                            android:text="0\nDead"
+                            android:textAlignment="center"
+                            android:textColor="#FF3700"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_calcu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cv_latestdata"
+                android:layout_margin="8dp"
+                android:elevation="10dp"
+                android:padding="4dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_calcu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/overpass_bold_italic"
+                        android:text="Calculated:"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_calcu"
+                        android:divider="@drawable/divider"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:showDividers="middle"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/tv_recoveryrate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/overpass_semi_bold"
+                            android:padding="5dp"
+                            android:text="0\nRecovery Rate"
+                            android:textAlignment="center"
+                            android:textColor="#43A047"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_deathrate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/overpass_semi_bold"
+                            android:padding="5dp"
+                            android:text="0\nDeath Rate"
+                            android:textAlignment="center"
+                            android:textColor="#FF3700"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/btn_viewtimeline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cv_calcu"
+                android:layout_margin="10dp"
+                android:background="@drawable/btn_bg"
+                android:fontFamily="@font/overpass_semi_bold"
+                android:padding="10dp"
+                android:text="View Timeline"
+                android:textColor="#000000" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

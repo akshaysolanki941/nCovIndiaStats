@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5c6aff"
+    tools:context=".StateWiseActivity">
+
+    <TextView
+        android:id="@+id/tv_statewise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5c6aff"
+        android:fontFamily="@font/overpass_bold_italic"
+        android:padding="10dp"
+        android:text="Statewise Data (India)"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_statewise"
+        android:layout_margin="10dp"
+        android:background="@drawable/rl_bg"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/et_search_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_bg"
+            android:hint="Search State"
+            android:padding="5dp"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_search_black_24dp" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_states"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search_box"
+        android:padding="5dp" />
+
+</RelativeLayout>
