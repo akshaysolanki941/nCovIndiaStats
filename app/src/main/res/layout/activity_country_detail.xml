@@ -252,7 +252,7 @@
                             android:padding="5dp"
                             android:text="0\nRecovered"
                             android:textAlignment="center"
-                            android:textColor="#5c6aff"
+                            android:textColor="#43A047"
                             android:textSize="15sp" />
 
                         <TextView
@@ -331,7 +331,7 @@
                             android:padding="5dp"
                             android:text="0\nRecovery Rate"
                             android:textAlignment="center"
-                            android:textColor="#43A047"
+                            android:textColor="#5c6aff"
                             android:textSize="15sp" />
 
                         <TextView

@@ -30,8 +30,9 @@
             <RelativeLayout
                 android:id="@+id/rl1"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:background="#5c6aff">
+                android:layout_height="wrap_content"
+                android:background="#5c6aff"
+                android:padding="5dp">
 
                 <TextView
                     android:id="@+id/tv_covid19"
@@ -61,13 +62,14 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_margin="15dp"
-                    android:background="@drawable/btn_bg1"
+                    android:background="@drawable/btn_bg2"
                     android:fontFamily="@font/overpass_light"
                     android:padding="5dp"
                     android:text="State-wise stats\nof india"
                     android:textColor="#ffffff" />
 
                 <LinearLayout
+                    android:id="@+id/ll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/btn_india_states"
@@ -97,6 +99,17 @@
                         android:src="@drawable/ic_report_problem_black_24dp" />
 
                 </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/overpass_extralight"
+                    android:text="Click a country to get detailed stats and timeline"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
 
             </RelativeLayout>
 

@@ -1,12 +1,5 @@
 package com.akshay.ncovindiastats;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -25,6 +18,13 @@ import com.akshay.ncovindiastats.Adapters.RVAllCountriesAdapter;
 import com.akshay.ncovindiastats.Models.AllCountries.Example;
 import com.akshay.ncovindiastats.Network.AllCountries.AllCountriesAPIClient;
 import com.akshay.ncovindiastats.Network.AllCountries.AllCountriesAPIInterface;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(new Intent(MainActivity.this, NumbersActivity.class));
                 else
                     Toast.makeText(MainActivity.this, "No Internet", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        ib_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ImageActivity.class));
             }
         });
 

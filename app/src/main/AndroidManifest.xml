@@ -12,7 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NumbersActivity"></activity>
+        <activity
+            android:name=".SplashMain2Activity"
+            android:screenOrientation="locked">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ImageActivity"
+            android:screenOrientation="locked" />
+        <activity
+            android:name=".NumbersActivity"
+            android:screenOrientation="locked" />
         <activity
             android:name=".StateWiseActivity"
             android:screenOrientation="locked" />
@@ -25,11 +39,7 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="locked">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

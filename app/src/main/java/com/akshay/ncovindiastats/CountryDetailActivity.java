@@ -1,10 +1,5 @@
 package com.akshay.ncovindiastats;
 
-import androidx.appcompat.app.AppCompatActivity;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,13 +8,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.akshay.ncovindiastats.Adapters.RVAllCountriesAdapter;
-import com.akshay.ncovindiastats.Models.AllCountries.Example;
 import com.akshay.ncovindiastats.Models.CountryData.Example1;
 import com.akshay.ncovindiastats.Network.AllCountries.AllCountriesAPIClient;
 import com.akshay.ncovindiastats.Network.AllCountries.AllCountriesAPIInterface;
 
 import java.text.DecimalFormat;
+
+import androidx.appcompat.app.AppCompatActivity;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class CountryDetailActivity extends AppCompatActivity {
 
@@ -72,13 +70,22 @@ public class CountryDetailActivity extends AppCompatActivity {
             public void onResponse(Call<Example1> call, Response<Example1> response) {
                 Example1 mydata = response.body();
 
-                int population = mydata.getData().getPopulation();
+                DecimalFormat formatter = new DecimalFormat("#,###");
+                String popu = "";
+
+                if (mydata.getData().getPopulation() == null)
+                    popu = "NA";
+                else {
+                    int population = mydata.getData().getPopulation();
+                    popu = formatter.format(population);
+                }
+
                 int c = mydata.getData().getLatestData().getConfirmed();
                 int r = mydata.getData().getLatestData().getRecovered();
                 int cr = mydata.getData().getLatestData().getCritical();
                 int d = mydata.getData().getLatestData().getDeaths();
-                DecimalFormat formatter = new DecimalFormat("#,###");
-                String popu = formatter.format(population);
+
+
                 String lc = formatter.format(c);
                 String lr = formatter.format(r);
                 String lcr = formatter.format(cr);

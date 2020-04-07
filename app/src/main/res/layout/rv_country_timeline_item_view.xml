@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
         android:elevation="10dp"
-        android:padding="5dp"
+        android:padding="2dp"
         app:cardBackgroundColor="#CCC6C6"
         app:cardCornerRadius="10dp">
 
@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_date"
-                android:layout_margin="8dp"
+                android:layout_margin="2dp"
                 android:elevation="10dp"
                 android:padding="5dp"
                 app:cardCornerRadius="10dp">
@@ -53,10 +53,10 @@
                         android:id="@+id/tv_timeline_confirmed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_margin="2dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/overpass_semi_bold"
-                        android:padding="5dp"
+                        android:padding="2dp"
                         android:text="0\nConfirmed"
                         android:textAlignment="center"
                         android:textColor="#fdb15d"
@@ -66,23 +66,23 @@
                         android:id="@+id/tv_timeline_recovered"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_margin="2dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/overpass_semi_bold"
-                        android:padding="5dp"
+                        android:padding="2dp"
                         android:text="0\nRecovered"
                         android:textAlignment="center"
-                        android:textColor="#5c6aff"
+                        android:textColor="#43A047"
                         android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/tv_timeline_active"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_margin="2dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/overpass_semi_bold"
-                        android:padding="5dp"
+                        android:padding="2dp"
                         android:text="0\nActive"
                         android:textAlignment="center"
                         android:textColor="#ff6f47"
@@ -92,10 +92,10 @@
                         android:id="@+id/tv_timeline_dead"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
+                        android:layout_margin="2dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/overpass_semi_bold"
-                        android:padding="5dp"
+                        android:padding="2dp"
                         android:text="0\nDead"
                         android:textAlignment="center"
                         android:textColor="#FF3700"
@@ -109,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/cv1"
-                android:layout_margin="8dp"
+                android:layout_margin="2dp"
                 android:elevation="10dp"
                 android:padding="5dp"
                 app:cardCornerRadius="10dp">
@@ -146,7 +146,7 @@
                         android:padding="5dp"
                         android:text="0\nNew Recovered"
                         android:textAlignment="center"
-                        android:textColor="#5c6aff"
+                        android:textColor="#43A047"
                         android:textSize="15sp" />
 
                     <TextView
@@ -159,7 +159,7 @@
                         android:padding="5dp"
                         android:text="0\nNew Dead"
                         android:textAlignment="center"
-                        android:textColor="#ff6f47"
+                        android:textColor="#FF3700"
                         android:textSize="15sp" />
 
                 </LinearLayout>
